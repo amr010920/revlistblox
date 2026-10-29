@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="light" dir="ltr" lang="en" style="height: 100%;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Bloxtip</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/amr010920/bloxtip/refs/heads/images/more/Untitled-removebg-preview.png">
+
+   <style>
+    :root {
+      --theme-navbar-bg: #0074BD;
+      --theme-primary: #02b757;
+      --theme-primary-hover: #00cc61;
+      --theme-chat-blue: #00a2ff;
+    }
+      
+     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; }
+    body {
+      background: #e3e3e3;
+      color: #191919;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+       <nav class="navbar">
+    <div class="nav-container">
+      <div class="left-section">
+        <button class="menu-toggle-btn" id="sidebar-toggle-btn" onclick="toggleSidebar()" title="Menu">
+          <div class="hamburger-icon">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </div>
+        </button>
+        <button class="logo-btn" onclick="window.location.href='./'" title="revstuff">
+          <img src="https://raw.githubusercontent.com/amr010920/bloxtip/images/more/Untitled-removebg-preview.png" alt="Bloxtip" class="logo-img">
+        </button>
+        <div class="header-nav">
+        </div>
+      </div>
