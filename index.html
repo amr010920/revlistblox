@@ -9,39 +9,40 @@
   <style>
     :root {
       --theme-navbar-bg: #0074BD;
-      --theme-primary: #02b757;
-      --theme-primary-hover: #00cc61;
-      --theme-chat-blue: #00a2ff;
-      --warning-bg: #ffebee;
-      --warning-border: #f44336;
-      --warning-text: #c62828;
+      --warning-bg: #ffeded;
+      --warning-border: #da291c;
+      --warning-text: #da291c;
     }
       
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
     html, body { height: 100%; width: 100%; }
     body {
       background: #e3e3e3;
-      color: #191919;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-      font-size: 16px;
+      color: #343434;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-size: 14px;
       display: flex;
       flex-direction: column;
       position: relative;
     }
 
-    /* Navbar Styling */
+    /* 2016 Roblox Style Navbar */
     .navbar {
       background-color: var(--theme-navbar-bg);
-      padding: 10px 20px;
+      height: 50px;
+      padding: 0 15px;
       display: flex;
       align-items: center;
-      color: white;
+      border-bottom: 1px solid #005a96;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
     .nav-container {
       display: flex;
       align-items: center;
       width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .left-section {
@@ -56,75 +57,86 @@
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       padding: 5px;
     }
 
     .hamburger-line {
-      width: 20px;
+      width: 18px;
       height: 2px;
       background-color: white;
-      border-radius: 2px;
     }
 
     .logo-btn {
       background: transparent;
       border: none;
       cursor: pointer;
+      display: flex;
+      align-items: center;
     }
 
     .logo-img {
-      height: 35px;
+      height: 28px;
       display: block;
     }
 
-    /* Main Content Styling */
+    /* Main Content Styling (2016 Roblox Container Layout) */
     .main-content {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 20px 15px;
+      max-width: 900px;
+      margin: 20px auto;
       width: 100%;
+      background: #ffffff;
+      border: 1px solid #c2c2c2;
     }
 
     .content-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #111;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #191919;
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 8px;
     }
 
     .site-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 6px;
     }
 
     .site-item {
-      background: white;
-      border-radius: 8px;
-      padding: 14px 18px;
+      background: #f8f8f8;
+      border: 1px solid #dcdcdc;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .site-item:hover {
+      background: #f0f0f0;
+      border-color: #adadad;
     }
 
     .site-info {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .site-name {
-      font-weight: 600;
-      color: #333;
+      font-weight: bold;
+      color: #0074BD;
+      min-width: 90px;
     }
 
     .site-link {
-      color: var(--theme-navbar-bg);
+      color: #0074BD;
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 13px;
     }
 
     .site-link:hover {
@@ -136,11 +148,10 @@
       background-color: var(--warning-bg);
       color: var(--warning-text);
       border: 1px solid var(--warning-border);
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 0.8rem;
+      padding: 2px 6px;
+      font-size: 11px;
       font-weight: bold;
-      margin-left: 10px;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
@@ -156,7 +167,7 @@
             <div class="hamburger-line"></div>
           </div>
         </button>
-        <button class="logo-btn" onclick="window.location.href='./'" title="revstuff">
+        <button class="logo-btn" onclick="window.location.href='./'" title="Bloxtip">
           <img src="https://raw.githubusercontent.com/amr010920/bloxtip/images/more/Untitled-removebg-preview.png" alt="Bloxtip" class="logo-img">
         </button>
         <div class="header-nav"></div>
@@ -169,67 +180,95 @@
     
     <ul class="site-list">
       <li class="site-item">
-        <span class="site-name">bloxxia</span>
-        <a href="https://bloxxia.de" target="_blank" class="site-link">bloxxia.de</a>
+        <div class="site-info">
+          <span class="site-name">bloxxia</span>
+          <a href="https://bloxxia.de" target="_blank" class="site-link">bloxxia.de</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">pekora</span>
-        <a href="https://pekora.pro" target="_blank" class="site-link">pekora.pro</a>
+        <div class="site-info">
+          <span class="site-name">pekora</span>
+          <a href="https://pekora.pro" target="_blank" class="site-link">pekora.pro</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Madoka</span>
-        <a href="https://madxka.com" target="_blank" class="site-link">madxka.com</a>
+        <div class="site-info">
+          <span class="site-name">Madoka</span>
+          <a href="https://madxka.com" target="_blank" class="site-link">madxka.com</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Wanwood</span>
-        <a href="https://wanwoo.xyz" target="_blank" class="site-link">wanwoo.xyz</a>
+        <div class="site-info">
+          <span class="site-name">Wanwood</span>
+          <a href="https://wanwoo.xyz" target="_blank" class="site-link">wanwoo.xyz</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">memoria</span>
-        <a href="https://memora.zip" target="_blank" class="site-link">memora.zip</a>
+        <div class="site-info">
+          <span class="site-name">memoria</span>
+          <a href="https://memora.zip" target="_blank" class="site-link">memora.zip</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Hexium</span>
-        <a href="https://Hexium.zip" target="_blank" class="site-link">Hexium.zip</a>
+        <div class="site-info">
+          <span class="site-name">Hexium</span>
+          <a href="https://Hexium.zip" target="_blank" class="site-link">Hexium.zip</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Kornet</span>
-        <a href="https://Kornet.lol" target="_blank" class="site-link">Kornet.lol</a>
+        <div class="site-info">
+          <span class="site-name">Kornet</span>
+          <a href="https://Kornet.lol" target="_blank" class="site-link">Kornet.lol</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Avoria</span>
-        <a href="https://Avoria.fun" target="_blank" class="site-link">Avoria.fun</a>
+        <div class="site-info">
+          <span class="site-name">Avoria</span>
+          <a href="https://Avoria.fun" target="_blank" class="site-link">Avoria.fun</a>
+          <span class="warning-badge">NOT RECOMMENDED (PEDOPHILE ALLEGATIONS) u can still join</span>
+        </div>
       </li>
       <li class="site-item">
         <div class="site-info">
           <span class="site-name">austiblox</span>
           <a href="https://austiblox.net" target="_blank" class="site-link">austiblox.net</a>
-          <span class="warning-badge">NOT RECOMMENDED (PEDOPHILE ALLEGATIONS) u can still join</span>
         </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Rexurs</span>
-        <a href="https://Rexurs.xyz" target="_blank" class="site-link">Rexurs.xyz</a>
+        <div class="site-info">
+          <span class="site-name">Rexurs</span>
+          <a href="https://Rexurs.xyz" target="_blank" class="site-link">Rexurs.xyz</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">rocket</span>
-        <a href="https://rockrev.de" target="_blank" class="site-link">rockrev.de</a>
+        <div class="site-info">
+          <span class="site-name">rocket</span>
+          <a href="https://rockrev.de" target="_blank" class="site-link">rockrev.de</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Lunori</span>
-        <a href="https://Lunori.xyz" target="_blank" class="site-link">Lunori.xyz</a>
+        <div class="site-info">
+          <span class="site-name">Lunori</span>
+          <a href="https://Lunori.xyz" target="_blank" class="site-link">Lunori.xyz</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Texium</span>
-        <a href="https://Texium.zip" target="_blank" class="site-link">Texium.zip</a>
+        <div class="site-info">
+          <span class="site-name">Texium</span>
+          <a href="https://Texium.zip" target="_blank" class="site-link">Texium.zip</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Oxides</span>
-        <a href="https://Oxides.wtf" target="_blank" class="site-link">Oxides.wtf</a>
+        <div class="site-info">
+          <span class="site-name">Oxides</span>
+          <a href="https://Oxides.wtf" target="_blank" class="site-link">Oxides.wtf</a>
+        </div>
       </li>
       <li class="site-item">
-        <span class="site-name">Zaplix</span>
-        <a href="https://Zaplix.xyz" target="_blank" class="site-link">Zaplix.xyz</a>
+        <div class="site-info">
+          <span class="site-name">Zaplix</span>
+          <a href="https://Zaplix.xyz" target="_blank" class="site-link">Zaplix.xyz</a>
+        </div>
       </li>
     </ul>
   </main>
