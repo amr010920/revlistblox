@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Bloxtip</title>
-  <link rel="icon" type="image/png" href="github.com/amr010920/revlistblox/blob/main/17a0cd380d7df792715bdfac32e6054f-removebg-preview.png?raw=true">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/amr010920/bloxtip/refs/heads/images/more/Untitled-removebg-preview.png">
 
   <style>
     :root {
@@ -12,22 +12,11 @@
       --theme-primary: #02b757;
       --theme-primary-hover: #00cc61;
       --theme-chat-blue: #00a2ff;
+      --warning-bg: #ffebee;
+      --warning-border: #f44336;
+      --warning-text: #c62828;
     }
-
-        /* TOP NAVBAR */
-    .navbar {
-      z-index: 1050;
-      height: 40px;
-      background-color: var(--theme-navbar-bg);
-      box-shadow: 0 1px 4px rgba(25, 25, 25, 0.3);
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      display: flex;
-      align-items: center;
-      padding: 0 15px;
-    }
-
-    
+      
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; width: 100%; }
     body {
@@ -38,6 +27,120 @@
       display: flex;
       flex-direction: column;
       position: relative;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: var(--theme-navbar-bg);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .menu-toggle-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 5px;
+    }
+
+    .hamburger-line {
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    .logo-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .logo-img {
+      height: 35px;
+      display: block;
+    }
+
+    /* Main Content Styling */
+    .main-content {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .content-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .site-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-item {
+      background: white;
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .site-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .site-name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .site-link {
+      color: var(--theme-navbar-bg);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .site-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Warning Badge Styling */
+    .warning-badge {
+      background-color: var(--warning-bg);
+      color: var(--warning-text);
+      border: 1px solid var(--warning-border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -54,14 +157,87 @@
           </div>
         </button>
         <button class="logo-btn" onclick="window.location.href='./'" title="revstuff">
-          <img src="github.com/amr010920/revlistblox/blob/main/17a0cd380d7df792715bdfac32e6054f-removebg-preview.png?raw=true" alt="Bloxtip" class="logo-img">
+          <img src="https://raw.githubusercontent.com/amr010920/bloxtip/images/more/Untitled-removebg-preview.png" alt="Bloxtip" class="logo-img">
         </button>
-        </button>
-        <div class="header-nav">
-        </div>
+        <div class="header-nav"></div>
       </div>
     </div>
   </nav>
 
+  <main class="main-content">
+    <h1 class="content-title">Site Directory</h1>
+    
+    <ul class="site-list">
+      <li class="site-item">
+        <span class="site-name">bloxxia</span>
+        <a href="https://bloxxia.de" target="_blank" class="site-link">bloxxia.de</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">pekora</span>
+        <a href="https://pekora.pro" target="_blank" class="site-link">pekora.pro</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Madoka</span>
+        <a href="https://madxka.com" target="_blank" class="site-link">madxka.com</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Wanwood</span>
+        <a href="https://wanwoo.xyz" target="_blank" class="site-link">wanwoo.xyz</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">memoria</span>
+        <a href="https://memora.zip" target="_blank" class="site-link">memora.zip</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Hexium</span>
+        <a href="https://Hexium.zip" target="_blank" class="site-link">Hexium.zip</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Kornet</span>
+        <a href="https://Kornet.lol" target="_blank" class="site-link">Kornet.lol</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Avoria</span>
+        <a href="https://Avoria.fun" target="_blank" class="site-link">Avoria.fun</a>
+      </li>
+      <li class="site-item">
+        <div class="site-info">
+          <span class="site-name">austiblox</span>
+          <a href="https://austiblox.net" target="_blank" class="site-link">austiblox.net</a>
+          <span class="warning-badge">NOT RECOMMENDED (PEDOPHILE ALLEGATIONS) u can still join</span>
+        </div>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Rexurs</span>
+        <a href="https://Rexurs.xyz" target="_blank" class="site-link">Rexurs.xyz</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">rocket</span>
+        <a href="https://rockrev.de" target="_blank" class="site-link">rockrev.de</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Lunori</span>
+        <a href="https://Lunori.xyz" target="_blank" class="site-link">Lunori.xyz</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Texium</span>
+        <a href="https://Texium.zip" target="_blank" class="site-link">Texium.zip</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Oxides</span>
+        <a href="https://Oxides.wtf" target="_blank" class="site-link">Oxides.wtf</a>
+      </li>
+      <li class="site-item">
+        <span class="site-name">Zaplix</span>
+        <a href="https://Zaplix.xyz" target="_blank" class="site-link">Zaplix.xyz</a>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      console.log("Sidebar toggled");
+    }
+  </script>
 </body>
 </html>
